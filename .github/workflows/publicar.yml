@@ -1,0 +1,57 @@
+name: Publicar en GitHub Pages
+
+# Cada vez que se sube algo a main, se reconstruye el sitio y se publica.
+# No hay paso manual: se edita, se sube, y en un par de minutos está en línea.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Si llegan dos cambios seguidos, se publica el último y se cancela el anterior.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  construir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Construir sitio estático
+        env:
+          # El sitio vive dentro de /pan-de-elia, no en la raíz del dominio.
+          NEXT_PUBLIC_BASE_PATH: /pan-de-elia
+          NEXT_PUBLIC_SITIO: https://emgbv1-rgb.github.io/pan-de-elia
+          # Vista previa: se publica con "no indexar" para no competir contra
+          # el dominio definitivo por el mismo contenido.
+          NEXT_PUBLIC_VISTA_PREVIA: "1"
+        run: npm run build
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  publicar:
+    needs: construir
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.despliegue.outputs.page_url }}
+    steps:
+      - id: despliegue
+        uses: actions/deploy-pages@v4

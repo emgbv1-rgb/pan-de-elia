@@ -1,0 +1,146 @@
+{
+  "hero-hogaza-masa-madre": {
+    "nombre": "hero-hogaza-masa-madre",
+    "ruta": "/fotos/hero-hogaza-masa-madre.webp",
+    "alt": "Hogaza de pan de masa madre recién horneada sostenida a mano en el obrador de Pan de Elia",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoQABUAPxFysFAsJqSisAgBgCIJZgCdMoADUvk3b43nw7orjgD7uxFxYyMzFjrx4dd/0uBV9KXPjcmMy6BaEIHy+BgND+dg3iEzc0oXvvWkq6zCYsh2fukbXzksZVu9JyzpdfqfppWTRL5KjXURybEEQ3tyVim8NeJipspVNqv1RsIsm6va6ytT5DsVtHyKkAA=",
+    "kb": 150
+  },
+  "proceso-01-masa": {
+    "nombre": "proceso-01-masa",
+    "ruta": "/fotos/proceso-01-masa.webp",
+    "alt": "Masa madre fermentada lista para hornear, marcada a mano antes de entrar al horno",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAACwAwCdASoQABUAPxFysFAsJqSisAgBgCIJQBUeg+s7vwYUEzecrgD+I7Ido8t/JeVNOXKpJ9S9+AAjz60T2ZrBNWK2iavLkE9At5QOLBhXeGGVBBwHhXYIycqMUSAMaeMUDkdMQxqT5C5TBvHz+hAMeeisgCIAAAA=",
+    "kb": 207
+  },
+  "proceso-02-formado": {
+    "nombre": "proceso-02-formado",
+    "ruta": "/fotos/proceso-02-formado.webp",
+    "alt": "Hogaza de masa madre con greñado en cuadrícula hecho a navaja antes del horneado",
+    "ancho": 900,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRqQAAABXRUJQVlA4IJgAAAAQBACdASoQAB0APxFysFAsJqSisAgBgCIJYgCdABeie5tMSIxfuWueYADMCWua7yEqHUSJTagH9FIAVM5wkeZUTfhzGlF3lB5/2joUBi2B6q0f+puS3a99bSTD2iuq+GHrTZKotXwE3HVqWfdiTtta8V8XtmY/ttBGLntAC3ZEWHoLSbJ6Noqsrl6xE0JJpCoZ4Hlqp4wAAA==",
+    "kb": 187
+  },
+  "proceso-03-horno": {
+    "nombre": "proceso-03-horno",
+    "ruta": "/fotos/proceso-03-horno.webp",
+    "alt": "Panadero cargando el horno de piso con la pala en la panadería Pan de Elia",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAQBACdASoQABUAPxFysFAsJqSisAgBgCIJYwC06ywBtIMpGNAZzjB10AD9T9i0FpWuYeQAifq8fztVjVM4sDJjUnphs9X76jBAq5jfsTMl7S9eQjeQWbIcX5O4VMgypvMBdWcxOJDAWunv5mJAulM9PF2RPVFY4vCL4go9YUNup0dHYlAAAA==",
+    "kb": 109
+  },
+  "proceso-04-salida": {
+    "nombre": "proceso-04-salida",
+    "ruta": "/fotos/proceso-04-salida.webp",
+    "alt": "Hogaza de pan de masa madre recién salida del horno, con la corteza dorada y crujiente",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRp4AAABXRUJQVlA4IJIAAAAQBACdASoQABUAPxFysFAsJqSisAgBgCIJQBOgAoYAXVwB0+xudM5nYADNkHq4h65kJ+N+zvIuXVhiqnsucAAKTJHwgGEo1RWmWHIFxtP7ZmSQ1O39cKxGCG16LDPmZeVY+CTh0R9zlPOqWWDa3flfjNxM7a6AQMf20fiHid/2G6aqS4kK2WKb0WLWN7QfnAAAAA==",
+    "kb": 107
+  },
+  "proceso-05-enfriado": {
+    "nombre": "proceso-05-enfriado",
+    "ruta": "/fotos/proceso-05-enfriado.webp",
+    "alt": "Rejillas con hogazas de masa madre enfriando después del horneado",
+    "ancho": 900,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRsIAAABXRUJQVlA4ILYAAABQBACdASoQAB0APxFysFAsJqSisAgBgCIJYwC7AywToAoFPZ9bBN1OjVQAAPeThB+on+6yD67p4a0kj3bedVS4+kBec+N1az+XyhIE3cmd7UwJzMyfHTf35315/b4M075qHqrVXj+TgQVJX5Z8tt/uXMyi87WR+OEC8Els8u4bJ726k7cGz0DH6wnmD/N8Ay5y5MfJ0Zf/ktFiA3xY5/gQU1cG72PEEKLWMPCXmG17pY/idMlYAA==",
+    "kb": 192
+  },
+  "proceso-06-miga": {
+    "nombre": "proceso-06-miga",
+    "ruta": "/fotos/proceso-06-miga.webp",
+    "alt": "Pan de masa madre rebanado mostrando la miga alveolada de fermentación larga",
+    "ancho": 1200,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAADwAwCdASoQABUAPxFysFAsJqSisAgBgCIJagCdIBgC4cUo12f5xuIAAP50zOxgKnHQ6nZWmypFpF9W3CwJ7ipUDcH6x6ZVW+R07FXYi/t+ktq+/40N6LuSvSFzjKxGd8zUSRKyxlXdZ2O3nz5lLK8uRMupCgTN9pRy/hzhw6GHAAAA",
+    "kb": 92
+  },
+  "familia-salados": {
+    "nombre": "familia-salados",
+    "ruta": "/fotos/familia-salados.webp",
+    "alt": "Hogazas de pan salado de masa madre: rústico, campestre y centeno",
+    "ancho": 1200,
+    "alto": 1570,
+    "lqip": "data:image/webp;base64,UklGRo4AAABXRUJQVlA4IIIAAAAQBACdASoQABUAPxFwsFAsJiSisAgBgCIJZACdMoADgPPCQN1BNV4AkADiDwNqALMO4FjSqOEphJchhZCUcPXisc5yvXoq0wm7DlhxMT0aPSj7Dtl58BCyNt/9qHU120P2kyo55rurchKn27wcyZX6zX4ZDzA2SQAUxbU3JLsagAAA",
+    "kb": 338
+  },
+  "familia-semidulces": {
+    "nombre": "familia-semidulces",
+    "ruta": "/fotos/familia-semidulces.webp",
+    "alt": "Pan semi-dulce de masa madre rebanado, con fruta integrada en la miga",
+    "ancho": 1200,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRoQAAABXRUJQVlA4IHgAAABQBACdASoQABUAPxFysFAsJqSisAgBgCIJZAC7BagBdk7LDgkTvGp9OKmgAP5AgP5F5O9xPkBk+BykpXGM72k9ocWh5+hejYxVi3EWrJr7bWB7LJZX4xF7vo1GerYoEs6ByLeVATXlLK4zmG5tHzy+osSFaBgAAAA=",
+    "kb": 237
+  },
+  "familia-bolleria": {
+    "nombre": "familia-bolleria",
+    "ruta": "/fotos/familia-bolleria.webp",
+    "alt": "Pan de mantequilla y brioche artesanal de Pan de Elia",
+    "ancho": 1200,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoQABUAPxFysFAsJqSisAgBgCIJZACdB3gAnw/jbfzNM3ukFAD+kZMnXGX8D3VAVAgDD91DMVPOnnjaUrYuLwt863QsO5N2/9cBr6W6x1T1kNE88G9iWXj4Q8gAgaYqHSaPn59/5P625ojiOHgZQxk8Wfgn14/EjXAAAA==",
+    "kb": 98
+  },
+  "galeria-01-campestre": {
+    "nombre": "galeria-01-campestre",
+    "ruta": "/fotos/galeria-01-campestre.webp",
+    "alt": "Hogaza campestre de masa madre sobre fondo claro",
+    "ancho": 900,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRm4AAABXRUJQVlA4IGIAAADwAwCdASoQAB0APxFOv1osIqgkmAGAIglAE6AL5V68mg5UQxBmWT98AP7v1kZM/M2lrGu3v+VDzmO1JRk6lzX/p/azmj3j+mOawHd0HJFcOj/gcLLFdkY73pvKQA8wGBQAAA==",
+    "kb": 134
+  },
+  "galeria-02-rustico": {
+    "nombre": "galeria-02-rustico",
+    "ruta": "/fotos/galeria-02-rustico.webp",
+    "alt": "Pan rústico de masa madre sobre mesa de madera",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRnoAAABXRUJQVlA4IG4AAABwBACdASoQABUAPxFysFAsJqSisAgBgCIJZgCdMoRwABmi9WeuxxOhEeQiSAD+cNFgQ12g4KypF5hAeCuYDfVxC19TfFlr5RExN9xpM8Ik8IqiyFUslKxD53wAoSdI5IDX2dMqFn/uRMW5i8AAAA==",
+    "kb": 221
+  },
+  "galeria-03-semillas": {
+    "nombre": "galeria-03-semillas",
+    "ruta": "/fotos/galeria-03-semillas.webp",
+    "alt": "Hogazas de pan de cinco semillas y centeno en el obrador",
+    "ancho": 1200,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwBACdASoQABUAPxFysFAsJqSisAgBgCIJZgC7MoAC+8Wo7P7JxozgTG10IADN0vJDDTySnGNsspMp3qNzaiuUc5fCw4CCiA+c7IZiTNx734r9ZCd7w+KEvSX0wMS5vNBWiZUx07dDM6mh+9DJW9cbDMauZb1fE0IZ56c5oMrMAA==",
+    "kb": 277
+  },
+  "galeria-04-centeno": {
+    "nombre": "galeria-04-centeno",
+    "ruta": "/fotos/galeria-04-centeno.webp",
+    "alt": "Hogaza de pan de centeno con corteza oscura y greñado profundo",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAwBACdASoQABUAPxFwsFAsJiSisAgBgCIJQBOgBF7mxgwxTPAyDb1yyOAA/PBWmF3tILX39ydk/IRZjSDypTqSYwbOr7JNzgUOYEEnaW0GITuKkzrN58Q6obgcfXrBwXzfmPJ1yPmYF7/L5tfYP/5GXFIiwNtWjiRWYMGWzs5AAA==",
+    "kb": 169
+  },
+  "galeria-05-trenza": {
+    "nombre": "galeria-05-trenza",
+    "ruta": "/fotos/galeria-05-trenza.webp",
+    "alt": "Trenza de masa dulce horneada, especialidad de temporada",
+    "ancho": 1200,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADQAwCdASoQABUAPxFysFAsJqSisAgBgCIJYgCdH8ABI+4Jw1+FhfQA/tROI9P+9I8kKaqJN0H5rqk39u0tI/tXRN8LvpS6P3+sd7ndynQChr45r1okVBG20kyDQKTqMk1ScVGJ6MPUQF9zexjJrIRoVttjay8dLIoee/mqeqaTUumKz0J5ei9vjU2/+eCYBdYHdn+N534WUO2WEAA=",
+    "kb": 121
+  },
+  "galeria-06-rebanado": {
+    "nombre": "galeria-06-rebanado",
+    "ruta": "/fotos/galeria-06-rebanado.webp",
+    "alt": "Barra de pan blanco de masa madre rebanada en la panadería",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoQABUAPxFysFAsJqSisAgBgCIJZQC7ACD66jfOy+5vWYAA/oVdrOJDxM5kytvUWmqkLz9ZZz7wVViE9oKFQPqQjuqH+uqm8YelSpJBvBPmiWaLYjsfM1WuntarYUkF5UYsh/MP3az3/Cx3oI6gIEZN9UVkAAAA",
+    "kb": 86
+  }
+}

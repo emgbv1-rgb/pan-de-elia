@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Expediente interno de EcoNova: contexto comercial y bitácora de sesiones.
+# Vive en el disco de Emilio, no en un repositorio público.
+/CLAUDE.md
+/AGENTS.md
+/notas-sesiones/
+tsconfig.tsbuildinfo

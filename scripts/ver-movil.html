@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Pan de Elia — vista móvil</title>
+<style>
+  body { margin:0; background:#3a3a3a; font-family:system-ui,sans-serif; display:flex; gap:28px; padding:24px; }
+  figure { margin:0; }
+  figcaption { color:#ddd; font-size:12px; margin-bottom:8px; letter-spacing:.08em; text-transform:uppercase; }
+  iframe { border:0; background:#fff; box-shadow:0 8px 40px rgba(0,0,0,.5); border-radius:10px; }
+</style>
+</head>
+<body>
+  <!-- Los media queries responden al ancho del iframe, no al de la ventana:
+       es la única forma fiable de ver el layout móvil real desde escritorio. -->
+  <figure>
+    <figcaption>iPhone 390 &times; 844</figcaption>
+    <iframe src="http://localhost:3200/" width="390" height="844"></iframe>
+  </figure>
+  <figure>
+    <figcaption>Tablet 768 &times; 844</figcaption>
+    <iframe src="http://localhost:3200/" width="768" height="844"></iframe>
+  </figure>
+</body>
+</html>
