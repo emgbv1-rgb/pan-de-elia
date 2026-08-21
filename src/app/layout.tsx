@@ -41,7 +41,7 @@ const parisienne = Parisienne({
 
 const TITULO = "Pan de Elia | Panadería de masa madre en Cuajimalpa, CDMX";
 const DESCRIPCION =
-  "Panadería artesanal de masa madre en Cuajimalpa, Ciudad de México. Hogazas de fermentación larga, centeno, campestre, rústico y brioche, horneados a diario. Pedidos por WhatsApp.";
+  "Panadería artesanal de masa madre en Cuajimalpa, Ciudad de México. Hogazas de fermentación larga, pan dulce, croissants y bollería horneados a diario. Pedidos por WhatsApp y precios de mayoreo para negocios.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(NEGOCIO.sitio),

@@ -5,6 +5,7 @@ import { NEGOCIO, enlaceWhatsApp } from "@/content/negocio";
 const SECCIONES = [
   { href: "#el-pan", texto: "El pan" },
   { href: "#como-se-hace", texto: "Cómo se hace" },
+  { href: "#mayoreo", texto: "Negocios" },
   { href: "#visitanos", texto: "Visítanos" },
 ];
 

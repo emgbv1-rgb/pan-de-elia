@@ -3,6 +3,7 @@ import { Portada } from "@/components/Portada";
 import { RelatoHorno } from "@/components/RelatoHorno";
 import { Catalogo } from "@/components/Catalogo";
 import { Galeria } from "@/components/Galeria";
+import { Mayoreo } from "@/components/Mayoreo";
 import { Visita } from "@/components/Visita";
 import { Pie } from "@/components/Pie";
 
@@ -23,6 +24,7 @@ export default function Inicio() {
         <RelatoHorno />
         <Catalogo />
         <Galeria />
+        <Mayoreo />
         <Visita />
       </main>
       <Pie />
