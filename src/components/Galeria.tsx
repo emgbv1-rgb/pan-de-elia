@@ -8,10 +8,13 @@ const PIEZAS = [
   "galeria-04-centeno",
   "galeria-05-trenza",
   "galeria-06-rebanado",
+  "galeria-07-conchas",
+  "galeria-08-palmeras",
+  "galeria-09-galletas",
 ] as const satisfies readonly (keyof typeof imagenes)[];
 
 /**
- * Galería del obrador.
+ * Galería de la panadería.
  *
  * En móvil se desliza de lado con anclaje por foto; en escritorio se despliega
  * en rejilla. El deslizamiento es `scroll-snap` de CSS, no un carrusel de
@@ -19,9 +22,9 @@ const PIEZAS = [
  */
 export function Galeria() {
   return (
-    <section aria-label="Fotografías del obrador" className="bg-papel pb-24 sm:pb-32">
+    <section aria-label="Fotografías de la panadería" className="bg-papel pb-24 sm:pb-32">
       <div
-        className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-borde pb-4 [scrollbar-width:none] sm:grid sm:grid-cols-3 sm:overflow-visible lg:grid-cols-6"
+        className="flex snap-x snap-mandatory gap-3 overflow-x-auto px-borde pb-4 [scrollbar-width:none] sm:grid sm:grid-cols-3 sm:overflow-visible lg:grid-cols-5"
       >
         {PIEZAS.map((pieza, i) => (
           <figure

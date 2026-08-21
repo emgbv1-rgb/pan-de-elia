@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Jost, Cormorant_Garamond } from "next/font/google";
+import { Montserrat, Parisienne } from "next/font/google";
 import { DatosEstructurados } from "@/components/DatosEstructurados";
 import { NEGOCIO, ES_VISTA_PREVIA } from "@/content/negocio";
 import { rutaPublica } from "@/content/rutas";
@@ -13,19 +13,29 @@ import "./globals.css";
  *
  * Jost es la geométrica más cercana al logotipo de la familia.
  */
-// Sólo los pesos que la página usa de verdad. Cada peso extra es un archivo
-// más que descargar: siete archivos pesaban 101 KB, cuatro pesan la mitad.
-const jost = Jost({
-  variable: "--fuente-display",
+// Las dos tipografías del logotipo.
+//
+// Montserrat es la sans del logo: se reconoce por la "a" de doble piso, que
+// descarta las geométricas puras como Poppins o Futura. Es además la que la
+// familia usa en su lista de precios.
+//
+// Parisienne es la caligráfica de "elia". Va SÓLO en acentos sueltos: una
+// caligrafía en párrafos es ilegible, y el propio logotipo la usa así — en una
+// palabra, no en toda la marca.
+//
+// Sólo los pesos que la página usa de verdad: cada peso extra es un archivo más
+// que descargar.
+const montserrat = Montserrat({
+  variable: "--fuente-texto",
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["200", "300", "400"],
   display: "swap",
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--fuente-serif",
+const parisienne = Parisienne({
+  variable: "--fuente-acento",
   subsets: ["latin"],
-  weight: ["300", "400"],
+  weight: ["400"],
   display: "swap",
 });
 
@@ -78,7 +88,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f7f3ea",
+  themeColor: "#faf7f1",
   colorScheme: "light",
 };
 
@@ -86,7 +96,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es-MX"
-      className={`${jost.variable} ${cormorant.variable} h-full antialiased`}
+      className={`${montserrat.variable} ${parisienne.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-papel text-tinta">
         {children}

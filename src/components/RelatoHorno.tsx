@@ -3,80 +3,79 @@ import { ETAPAS } from "@/content/horno";
 import imagenes from "@/content/imagenes.json";
 
 /**
- * De la masa a la miga.
+ * Cómo se hace el pan.
  *
- * Cómo funciona el efecto: cada etapa ocupa un bloque más alto que la pantalla
- * y su contenido —foto y texto juntos— se queda pegado (`position: sticky`)
- * mientras ese bloque pasa. El resultado es que cada etapa se sostiene un
- * momento en pantalla y la siguiente la empuja hacia arriba, como si el pan
- * avanzara por el obrador conforme el visitante baja.
+ * Se quitó el efecto de scroll que había antes. La razón es de fondo: sin una
+ * animación real que enseñe el pan saliendo del horno, dejar la foto pegada a
+ * la pantalla era movimiento sin contenido — llamaba la atención sobre sí mismo
+ * en vez de sobre el pan, y obligaba a hacer scroll seis pantallas para leer
+ * seis frases.
  *
- * Foto y texto se pegan JUNTOS, no por separado. Es la corrección de un error
- * previo: al pegar sólo la foto, el texto terminaba antes que el bloque y
- * quedaba media pantalla en blanco.
+ * En su lugar, una composición editorial en zigzag: cada etapa alterna el lado
+ * de la foto. Se lee de un tirón, funciona igual en cualquier navegador y las
+ * fotos se ven más grandes que antes.
  *
- * Todo el movimiento es CSS. No hay una sola línea de JavaScript en esta
- * sección: el texto está en el HTML que el servidor entrega, así que Google lo
- * lee completo aunque nunca ejecute un script. Ese es exactamente el punto —
- * la página tiene que verse bien y pesar poco al mismo tiempo.
+ * Lo único que se mueve es la aparición al entrar en pantalla, y es CSS puro.
  */
 export function RelatoHorno() {
   return (
-    <section id="como-se-hace" className="relative bg-tinta text-papel">
-      {/* Franja que se llena conforme avanza la lectura de la sección. */}
-      <div aria-hidden className="sticky top-16 z-40 h-px w-full bg-papel/10 sm:top-20">
-        <div className="progreso-horno h-px w-full bg-corteza" />
-      </div>
-
-      <div className="mx-auto max-w-7xl px-borde pb-16 pt-24 sm:pt-32">
-        <p className="text-[0.72rem] uppercase tracking-[0.26em] text-corteza-clara">
+    <section id="como-se-hace" className="bg-papel-hondo py-24 sm:py-32">
+      <div className="mx-auto max-w-7xl px-borde">
+        <p className="text-[0.7rem] uppercase tracking-[0.26em] text-corteza">
           Cómo se hace
         </p>
-        <h2 className="mt-5 max-w-2xl text-balance font-serif text-[clamp(2rem,5.5vw,3.5rem)] font-light leading-[1.08]">
+        <h2 className="mt-5 max-w-2xl text-balance text-[clamp(1.85rem,4.4vw,2.9rem)] font-extralight leading-[1.14]">
           De la masa a la miga, sin atajos
         </h2>
-        <p className="mt-6 max-w-xl text-pretty leading-relaxed text-papel/60">
+        <p className="mt-6 max-w-xl text-pretty leading-relaxed text-humo">
           Seis etapas y varios días de por medio. Es la parte del oficio que no
           se ve desde el mostrador.
         </p>
       </div>
 
-      {ETAPAS.map((etapa) => (
-        <article key={etapa.numero} className="relative min-h-[135svh]">
-          <div className="sticky top-16 flex min-h-[calc(100svh-4rem)] items-center py-8 sm:top-20 sm:min-h-[calc(100svh-5rem)]">
-            <div className="mx-auto grid w-full max-w-7xl items-center gap-8 px-borde md:grid-cols-2 md:gap-x-16">
-              {/* Foto */}
-              {/* El alto se limita al del viewport para que la etapa completa
-                  quepa en pantalla sin que haya que hacer scroll dentro. */}
-              <div className="asentar relative aspect-4/3 max-h-[40svh] overflow-hidden rounded-sm md:aspect-3/4 md:max-h-[72svh]">
+      <div className="mx-auto mt-16 grid max-w-7xl gap-x-14 gap-y-16 px-borde sm:mt-20 sm:gap-y-24 md:grid-cols-2">
+        {ETAPAS.map((etapa, i) => (
+          <article
+            key={etapa.numero}
+            className="surgir grid gap-6 sm:grid-cols-[minmax(0,1fr)_minmax(0,1.1fr)] sm:items-center md:grid-cols-1 md:gap-0"
+          >
+            {/* En dos columnas la foto alterna de lado, para que la lectura no
+                caiga siempre en el mismo sitio. */}
+            <div
+              className={`overflow-hidden rounded-sm ${
+                i % 2 === 1 ? "sm:order-2 md:order-none" : ""
+              }`}
+            >
+              <div className="aspect-4/3 md:aspect-3/2">
                 <Foto
                   nombre={etapa.foto as keyof typeof imagenes}
-                  sizes="(min-width: 768px) 44vw, 100vw"
+                  sizes="(min-width: 768px) 44vw, (min-width: 640px) 50vw, 100vw"
                   className="h-full w-full object-cover"
                 />
               </div>
-
-              {/* Texto */}
-              <div className="surgir">
-                <div className="flex items-center gap-4">
-                  <span className="font-serif text-[2.5rem] font-light leading-none text-corteza">
-                    {etapa.numero}
-                  </span>
-                  <span aria-hidden className="h-px w-12 bg-corteza/50" />
-                </div>
-
-                <h3 className="mt-5 font-serif text-[clamp(1.9rem,4.5vw,3rem)] font-light leading-tight">
-                  {etapa.titulo}
-                </h3>
-
-                <p className="mt-5 max-w-md text-pretty text-[1.02rem] leading-relaxed text-papel/70">
-                  {etapa.texto}
-                </p>
-              </div>
             </div>
-          </div>
-        </article>
-      ))}
+
+            <div className="md:mt-7">
+              <div className="flex items-center gap-3">
+                <span className="text-[0.95rem] font-normal tracking-[0.1em] text-corteza">
+                  {etapa.numero}
+                </span>
+                <span aria-hidden className="h-px w-9 bg-corteza/35" />
+              </div>
+
+              {/* La caligráfica del logo, aquí sí: son dos palabras. En un
+                  párrafo sería ilegible; en un título corto es la marca. */}
+              <h3 className="mt-2 font-acento text-[clamp(1.9rem,3.6vw,2.5rem)] font-normal leading-[1.1] tracking-normal">
+                {etapa.titulo}
+              </h3>
+
+              <p className="mt-3 max-w-md text-pretty text-[0.97rem] leading-relaxed text-humo">
+                {etapa.texto}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }

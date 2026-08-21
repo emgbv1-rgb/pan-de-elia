@@ -24,7 +24,7 @@ const FOTOS = [
   {
     src: "PHOTO-2025-07-31-02-37-40.jpg",
     out: "hero-hogaza-masa-madre",
-    alt: "Hogaza de pan de masa madre recién horneada sostenida a mano en el obrador de Pan de Elia",
+    alt: "Hogaza de pan de masa madre recién horneada sostenida a mano en la panadería Pan de Elia",
   },
 
   // Secuencia del horno (el scrollytelling). El orden importa.
@@ -75,6 +75,11 @@ const FOTOS = [
     out: "familia-bolleria",
     alt: "Pan de mantequilla y brioche artesanal de Pan de Elia",
   },
+  {
+    src: "PHOTO-2025-10-23-19-09-12.jpg",
+    out: "familia-pan-dulce",
+    alt: "Vitrina con pan dulce recién horneado: chocolatines, conchas y bollería",
+  },
 
   // Galería / textura de marca
   {
@@ -90,7 +95,7 @@ const FOTOS = [
   {
     src: "PHOTO-2025-05-20-17-56-24.jpg",
     out: "galeria-03-semillas",
-    alt: "Hogazas de pan de cinco semillas y centeno en el obrador",
+    alt: "Hogazas de pan de cinco semillas y centeno en el horno",
   },
   {
     src: "PHOTO-2025-08-05-02-46-11.jpg",
@@ -106,6 +111,21 @@ const FOTOS = [
     src: "PHOTO-2026-01-29-20-58-08.jpg",
     out: "galeria-06-rebanado",
     alt: "Barra de pan blanco de masa madre rebanada en la panadería",
+  },
+  {
+    src: "PHOTO-2025-05-20-17-56-24(2).jpg",
+    out: "galeria-07-conchas",
+    alt: "Conchas de vainilla y de chocolate recién horneadas",
+  },
+  {
+    src: "PHOTO-2026-06-01-01-48-50.jpg",
+    out: "galeria-08-palmeras",
+    alt: "Palmeras de hojaldre horneadas, doradas y caramelizadas",
+  },
+  {
+    src: "PHOTO-2025-05-20-17-56-24(1).jpg",
+    out: "galeria-09-galletas",
+    alt: "Galletas de pistache y de chispas de chocolate sobre tabla de madera",
   },
 ];
 

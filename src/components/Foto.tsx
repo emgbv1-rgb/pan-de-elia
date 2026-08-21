@@ -17,7 +17,7 @@ type Props = {
 };
 
 /**
- * Foto del obrador.
+ * Foto de la panadería.
  *
  * Toma las dimensiones reales y el texto alternativo del manifiesto, no de lo
  * que alguien recuerde escribir. Dos consecuencias: el navegador reserva el

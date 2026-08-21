@@ -2,29 +2,34 @@
 
 /* ---------------------------------------------------------------------------
    Sistema de diseño — Pan de Elia
-   Los colores salen del logotipo (negro cálido sobre crema) y de las propias
-   fotos del obrador: corteza dorada y miga.
+
+   La panadería es un espacio claro y el pan se ve mejor sobre fondo claro: el
+   sitio entero va en crema. El contraste lo dan las dos franjas oscuras que lo
+   enmarcan —la barra de arriba y el pie— y las propias fotos.
 --------------------------------------------------------------------------- */
 
 @theme {
-  /* Tinta: el negro del logotipo. Cálido, no azulado. */
+  /* Tinta: el negro del logotipo. Cálido, no azulado. Ahora se usa como
+     color de TEXTO y en las dos franjas que enmarcan la página. */
   --color-tinta: #14120e;
   --color-tinta-suave: #2b2721;
 
-  /* Papel: el crema de fondo. */
-  --color-papel: #f7f3ea;
-  --color-papel-hondo: #ebe4d6;
+  /* Papel: el fondo de casi todo el sitio. */
+  --color-papel: #faf7f1;
+  --color-papel-hondo: #f2ece0;
+  /* Un crema un punto más oscuro, para separar bloques sin usar líneas. */
+  --color-papel-sombra: #ebe3d4;
 
   /* Corteza y miga: los tonos del pan. */
-  --color-corteza: #a9762f;
+  --color-corteza: #98682a;
   --color-corteza-clara: #c99a51;
   --color-miga: #e6d9c2;
 
   /* Texto secundario sobre papel. */
   --color-humo: #6d6455;
 
-  --font-display: var(--fuente-display), "Century Gothic", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--fuente-serif), ui-serif, Georgia, serif;
+  --font-texto: var(--fuente-texto), "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-acento: var(--fuente-acento), ui-serif, cursive;
 
   --spacing-borde: clamp(1.25rem, 5vw, 5rem);
 }
@@ -33,7 +38,7 @@
 
 html {
   scroll-behavior: smooth;
-  /* El encabezado es fijo: los anclas no deben quedar debajo de él. */
+  /* La barra superior es fija: los anclas no deben quedar debajo de ella. */
   scroll-padding-top: 5rem;
   background-color: var(--color-papel);
 }
@@ -41,11 +46,17 @@ html {
 body {
   background-color: var(--color-papel);
   color: var(--color-tinta);
-  font-family: var(--font-display);
+  font-family: var(--font-texto);
   font-weight: 300;
   /* Las cifras de horarios se alinean en columna. */
   font-variant-numeric: tabular-nums lining-nums;
   -webkit-font-smoothing: antialiased;
+}
+
+/* Montserrat es ancha: en titulares grandes conviene cerrar un poco el
+   interletraje para que no se deshilache. */
+:where(h1, h2, h3) {
+  letter-spacing: -0.015em;
 }
 
 ::selection {
@@ -63,30 +74,19 @@ body {
 /* ---------------------------------------------------------------------------
    Aparición al entrar en pantalla.
 
-   Se hace con `animation-timeline`, que corre en el compositor del navegador:
-   cero JavaScript y cero coste para el INP. Es deliberado — este sitio existe
-   para posicionar, y el JavaScript de animación es justo lo que penaliza.
+   Es lo único que se anima en el sitio: los bloques suben un poco al aparecer.
+   Se hace con `animation-timeline`, que corre en el compositor del navegador —
+   cero JavaScript y cero coste para el INP.
 
-   La opacidad inicial vive DENTRO de @supports: si el navegador no entiende
-   las animaciones ligadas al scroll, el contenido nunca se esconde. Nada de lo
-   que Google debe leer depende de que la animación funcione.
+   La opacidad inicial vive DENTRO de @supports: si el navegador no entiende las
+   animaciones ligadas al scroll, el contenido nunca se esconde. Nada de lo que
+   Google debe leer depende de que la animación funcione.
 --------------------------------------------------------------------------- */
 
 @keyframes surgir {
   from {
     opacity: 0;
-    transform: translateY(1.75rem);
-  }
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-@keyframes asentar {
-  from {
-    opacity: 0;
-    transform: scale(1.06);
+    transform: translateY(1.25rem);
   }
   to {
     opacity: 1;
@@ -100,53 +100,14 @@ body {
       opacity: 0;
       animation: surgir linear both;
       animation-timeline: view();
-      animation-range: entry 5% cover 30%;
+      animation-range: entry 5% cover 28%;
     }
-
-    .asentar {
-      opacity: 0;
-      animation: asentar linear both;
-      animation-timeline: view();
-      animation-range: entry 0% cover 25%;
-    }
-  }
-}
-
-/* ---------------------------------------------------------------------------
-   Relato del horno.
-
-   La base es `position: sticky`, que funciona en todos los navegadores desde
-   hace años: la foto de cada etapa se queda quieta mientras su texto pasa por
-   delante. Sin sticky el bloque sigue leyéndose perfectamente, sólo deja de
-   quedarse fijo. Es degradación limpia, no rotura.
---------------------------------------------------------------------------- */
-
-/* El pegado se declara con utilidades en el propio componente; aquí sólo vive
-   lo que Tailwind no cubre. */
-
-/* La barra de progreso del relato se llena con el scroll de la sección. */
-@supports (animation-timeline: scroll()) {
-  @media (prefers-reduced-motion: no-preference) {
-    .progreso-horno {
-      transform-origin: left center;
-      animation: llenar linear both;
-      animation-timeline: scroll(nearest block);
-    }
-  }
-}
-
-@keyframes llenar {
-  from {
-    scale: 0 1;
-  }
-  to {
-    scale: 1 1;
   }
 }
 
 /* Textura sutil de papel, dibujada en CSS: no cuesta ninguna petición. */
 .textura-papel {
   background-image:
-    radial-gradient(circle at 15% 20%, color-mix(in srgb, var(--color-miga) 55%, transparent) 0, transparent 45%),
-    radial-gradient(circle at 85% 70%, color-mix(in srgb, var(--color-miga) 40%, transparent) 0, transparent 40%);
+    radial-gradient(circle at 12% 15%, color-mix(in srgb, var(--color-miga) 40%, transparent) 0, transparent 42%),
+    radial-gradient(circle at 88% 78%, color-mix(in srgb, var(--color-miga) 30%, transparent) 0, transparent 38%);
 }

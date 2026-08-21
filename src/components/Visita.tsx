@@ -13,22 +13,22 @@ import { NEGOCIO, ENLACE_MAPA, enlaceWhatsApp } from "@/content/negocio";
  */
 export function Visita() {
   return (
-    <section id="visitanos" className="bg-tinta py-24 text-papel sm:py-32">
+    <section id="visitanos" className="textura-papel bg-papel py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-borde">
-        <p className="text-[0.72rem] uppercase tracking-[0.26em] text-corteza-clara">
+        <p className="text-[0.7rem] uppercase tracking-[0.26em] text-corteza">
           Visítanos
         </p>
-        <h2 className="mt-5 max-w-2xl text-balance font-serif text-[clamp(2rem,5.5vw,3.5rem)] font-light leading-[1.08]">
-          El obrador está en Cuajimalpa
+        <h2 className="mt-5 max-w-2xl text-balance text-[clamp(1.85rem,4.4vw,2.9rem)] font-extralight leading-[1.14]">
+          Nuestro horno está en Cuajimalpa
         </h2>
 
-        <div className="mt-14 grid gap-x-16 gap-y-12 border-t border-papel/12 pt-12 md:grid-cols-3">
+        <div className="mt-14 grid gap-x-16 gap-y-12 border-t border-tinta/12 pt-12 md:grid-cols-3">
           {/* Dirección */}
           <div className="surgir">
-            <h3 className="text-[0.72rem] uppercase tracking-[0.2em] text-papel/45">
+            <h3 className="text-[0.7rem] uppercase tracking-[0.2em] text-humo/70">
               Dirección
             </h3>
-            <address className="mt-5 not-italic text-[1.05rem] leading-relaxed text-papel/85">
+            <address className="mt-5 not-italic text-[1.02rem] leading-relaxed">
               {NEGOCIO.direccion.calle}
               <br />
               {NEGOCIO.direccion.colonia}
@@ -41,7 +41,7 @@ export function Visita() {
               href={ENLACE_MAPA}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-5 inline-block text-[0.75rem] uppercase tracking-[0.14em] text-corteza-clara underline decoration-1 underline-offset-4 transition-colors hover:text-papel"
+              className="mt-5 inline-block text-[0.73rem] uppercase tracking-[0.14em] text-corteza underline decoration-1 underline-offset-4 transition-colors hover:text-tinta"
             >
               Cómo llegar
             </a>
@@ -49,29 +49,29 @@ export function Visita() {
 
           {/* Horarios */}
           <div className="surgir">
-            <h3 className="text-[0.72rem] uppercase tracking-[0.2em] text-papel/45">
+            <h3 className="text-[0.7rem] uppercase tracking-[0.2em] text-humo/70">
               Horarios
             </h3>
-            <dl className="mt-5 space-y-2.5 text-[1.05rem] text-papel/85">
+            <dl className="mt-5 space-y-2.5 text-[1.02rem]">
               {NEGOCIO.horarios.map((h) => (
                 <div key={h.dias} className="flex items-baseline justify-between gap-6">
                   <dt>{h.dias}</dt>
-                  <dd className="text-papel/60">
+                  <dd className="text-humo">
                     {h.abre} – {h.cierra}
                   </dd>
                 </div>
               ))}
-              <div className="flex items-baseline justify-between gap-6 text-papel/40">
+              <div className="flex items-baseline justify-between gap-6 text-humo/50">
                 <dt>Domingo</dt>
                 <dd>Cerrado</dd>
               </div>
             </dl>
 
             <div className="mt-7 border-l-2 border-corteza pl-4">
-              <p className="text-[0.75rem] uppercase tracking-[0.14em] text-corteza-clara">
+              <p className="text-[0.73rem] uppercase tracking-[0.14em] text-corteza">
                 {NEGOCIO.puntoAdicional.dia}
               </p>
-              <p className="mt-1.5 text-[0.95rem] leading-relaxed text-papel/70">
+              <p className="mt-1.5 text-[0.93rem] leading-relaxed text-humo">
                 También nos encuentras en {NEGOCIO.puntoAdicional.nombre}, de{" "}
                 {NEGOCIO.puntoAdicional.horario}.
               </p>
@@ -80,10 +80,10 @@ export function Visita() {
 
           {/* Pedidos */}
           <div className="surgir">
-            <h3 className="text-[0.72rem] uppercase tracking-[0.2em] text-papel/45">
+            <h3 className="text-[0.7rem] uppercase tracking-[0.2em] text-humo/70">
               Pedidos
             </h3>
-            <p className="mt-5 text-pretty text-[1.02rem] leading-relaxed text-papel/70">
+            <p className="mt-5 text-pretty text-[1rem] leading-relaxed text-humo">
               Los pedidos se toman por WhatsApp. Escríbenos y te decimos qué hay
               horneado hoy y qué podemos apartarte.
             </p>
@@ -94,16 +94,16 @@ export function Visita() {
               )}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-7 inline-block rounded-full bg-papel px-7 py-3.5 text-[0.78rem] uppercase tracking-[0.16em] text-tinta transition-colors hover:bg-corteza-clara"
+              className="mt-7 inline-block rounded-full bg-tinta px-7 py-3.5 text-[0.75rem] uppercase tracking-[0.16em] text-papel transition-colors hover:bg-corteza"
             >
               Escribir por WhatsApp
             </a>
 
-            <p className="mt-6 text-[0.95rem] text-papel/60">
+            <p className="mt-6 text-[0.93rem] text-humo">
               O por teléfono:{" "}
               <a
                 href={`tel:${NEGOCIO.telefono.e164}`}
-                className="text-papel/85 underline decoration-papel/25 underline-offset-4 transition-colors hover:decoration-corteza"
+                className="text-tinta underline decoration-tinta/25 underline-offset-4 transition-colors hover:decoration-corteza"
               >
                 {NEGOCIO.telefono.display}
               </a>

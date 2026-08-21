@@ -1,9 +1,9 @@
 /**
  * Las etapas del pan, de la masa a la miga.
  *
- * Es la sección narrada de la página: la foto se queda fija mientras el texto
- * avanza con el scroll. Las seis fotos son del obrador de Pan de Elia, no de
- * banco de imágenes — eso es justamente lo que la vuelve creíble.
+ * Nota de lenguaje: aquí no se usa la palabra "obrador". Es correcta en España
+ * pero en México no se entiende, y el sitio se lee en la Ciudad de México. Se
+ * dice "el horno" o "la panadería", que es como habla el cliente.
  *
  * PENDIENTE: los textos los redactó EcoNova sobre lo que es cierto por
  * definición de la masa madre. La familia debe revisarlos y, sobre todo,
@@ -22,9 +22,9 @@ export type Etapa = {
 export const ETAPAS: Etapa[] = [
   {
     numero: "01",
-    titulo: "La madre",
+    titulo: "La masa",
     texto:
-      "No usamos levadura industrial. El fermento vive en el obrador, se alimenta cada día y es el mismo que levanta todo el pan que sale de aquí.",
+      "No usamos levadura industrial. La masa se levanta con un fermento vivo que se alimenta cada día en la panadería, y es el mismo que levanta todo el pan que sale de aquí.",
     foto: "proceso-01-masa",
   },
   {

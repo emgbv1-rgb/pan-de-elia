@@ -17,7 +17,7 @@ const SECCIONES = [
  */
 export function Encabezado() {
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-papel/10 bg-tinta/80 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-tinta bg-tinta/95 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-borde sm:h-20">
         <a href="#portada" className="shrink-0" aria-label={`${NEGOCIO.nombre} — inicio`}>
           <Image

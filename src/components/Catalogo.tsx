@@ -1,5 +1,5 @@
 import { Foto } from "@/components/Foto";
-import { CATALOGO, TOTAL_PANES, type Familia } from "@/content/catalogo";
+import { CATALOGO, TOTAL_PANES, TOTAL_FAMILIAS, type Familia } from "@/content/catalogo";
 import imagenes from "@/content/imagenes.json";
 import { enlaceWhatsApp } from "@/content/negocio";
 
@@ -12,7 +12,7 @@ import { enlaceWhatsApp } from "@/content/negocio";
  * buscador pueda leer — están en fotos de Instagram y en conversaciones de
  * WhatsApp, y ninguna de las dos cosas se indexa.
  *
- * Los 22 panes se listan completos, sin pestañas ni desplegables. Lo que se
+ * Todos los panes se listan completos, sin pestañas ni desplegables. Lo que se
  * esconde detrás de un clic pesa menos para Google, y esconder no aportaba
  * nada: la lista cabe.
  *
@@ -23,15 +23,15 @@ export function Catalogo() {
   return (
     <section id="el-pan" className="textura-papel bg-papel py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-borde">
-        <p className="text-[0.72rem] uppercase tracking-[0.26em] text-corteza">
+        <p className="text-[0.7rem] uppercase tracking-[0.26em] text-corteza">
           El pan
         </p>
-        <h2 className="mt-5 max-w-2xl text-balance font-serif text-[clamp(2rem,5.5vw,3.5rem)] font-light leading-[1.08]">
-          {TOTAL_PANES} panes, tres familias
+        <h2 className="mt-5 max-w-2xl text-balance text-[clamp(1.85rem,4.4vw,2.9rem)] font-extralight leading-[1.14]">
+          {TOTAL_PANES} panes, {TOTAL_FAMILIAS} familias
         </h2>
         <p className="mt-6 max-w-xl text-pretty leading-relaxed text-humo">
-          Todo sale del mismo fermento. Cambia la harina, el tiempo y lo que
-          lleva dentro.
+          Del pan de mesa al pan dulce de la mañana. Todo se hornea aquí, todos
+          los días.
         </p>
       </div>
 
@@ -66,7 +66,7 @@ function FamiliaDePan({ familia }: { familia: Familia }) {
           </div>
           <h3
             id={`familia-${familia.slug}`}
-            className="mt-7 font-serif text-[clamp(1.75rem,4vw,2.5rem)] font-light leading-tight"
+            className="mt-6 font-acento text-[clamp(2.1rem,4.4vw,2.9rem)] font-normal leading-[1.1] tracking-normal"
           >
             {familia.nombre}
           </h3>
@@ -80,7 +80,7 @@ function FamiliaDePan({ familia }: { familia: Familia }) {
           {familia.panes.map((pan) => (
             <li key={pan.slug} className="group bg-papel p-6 transition-colors hover:bg-papel-hondo">
               <div className="flex items-baseline justify-between gap-3">
-                <h4 className="font-serif text-[1.35rem] font-normal leading-snug">
+                <h4 className="text-[1.05rem] font-normal leading-snug">
                   {pan.nombre}
                 </h4>
                 {/* Sin `uppercase`: convertiría "500 g" en "500 G", y en
@@ -112,6 +112,11 @@ function FamiliaDePan({ familia }: { familia: Familia }) {
                 {pan.enMolde && (
                   <span className="text-[0.78rem] text-humo/60">
                     También en molde de 1 kg
+                  </span>
+                )}
+                {pan.temporada && (
+                  <span className="text-[0.78rem] text-corteza">
+                    {pan.temporada}
                   </span>
                 )}
               </div>

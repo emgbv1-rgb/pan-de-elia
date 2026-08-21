@@ -2,7 +2,7 @@
   "hero-hogaza-masa-madre": {
     "nombre": "hero-hogaza-masa-madre",
     "ruta": "/fotos/hero-hogaza-masa-madre.webp",
-    "alt": "Hogaza de pan de masa madre recién horneada sostenida a mano en el obrador de Pan de Elia",
+    "alt": "Hogaza de pan de masa madre recién horneada sostenida a mano en la panadería Pan de Elia",
     "ancho": 960,
     "alto": 1280,
     "lqip": "data:image/webp;base64,UklGRqIAAABXRUJQVlA4IJYAAAAQBACdASoQABUAPxFysFAsJqSisAgBgCIJZgCdMoADUvk3b43nw7orjgD7uxFxYyMzFjrx4dd/0uBV9KXPjcmMy6BaEIHy+BgND+dg3iEzc0oXvvWkq6zCYsh2fukbXzksZVu9JyzpdfqfppWTRL5KjXURybEEQ3tyVim8NeJipspVNqv1RsIsm6va6ytT5DsVtHyKkAA=",
@@ -89,6 +89,15 @@
     "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAAAQBACdASoQABUAPxFysFAsJqSisAgBgCIJZACdB3gAnw/jbfzNM3ukFAD+kZMnXGX8D3VAVAgDD91DMVPOnnjaUrYuLwt863QsO5N2/9cBr6W6x1T1kNE88G9iWXj4Q8gAgaYqHSaPn59/5P625ojiOHgZQxk8Wfgn14/EjXAAAA==",
     "kb": 98
   },
+  "familia-pan-dulce": {
+    "nombre": "familia-pan-dulce",
+    "ruta": "/fotos/familia-pan-dulce.webp",
+    "alt": "Vitrina con pan dulce recién horneado: chocolatines, conchas y bollería",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRqgAAABXRUJQVlA4IJwAAADQBACdASoQABUAPxFysFAsJqSisAgBgCIJbACdMoR4ISAKD0NPb1MudjF+ZglUgAD+qS0i29imJSTj4M8LHmZZ+sTF4t9zX5XTKjjB5JyC0tC3uIH47K+9veV+moDgyfhZOeqlO930CbPLy103Tenw1nGBCJ6pY8fNBlA7g6/wzJEk84sHDq6OScEKnXbw4uwgMEzpcNMqMflUcAA=",
+    "kb": 82
+  },
   "galeria-01-campestre": {
     "nombre": "galeria-01-campestre",
     "ruta": "/fotos/galeria-01-campestre.webp",
@@ -110,7 +119,7 @@
   "galeria-03-semillas": {
     "nombre": "galeria-03-semillas",
     "ruta": "/fotos/galeria-03-semillas.webp",
-    "alt": "Hogazas de pan de cinco semillas y centeno en el obrador",
+    "alt": "Hogazas de pan de cinco semillas y centeno en el horno",
     "ancho": 1200,
     "alto": 1600,
     "lqip": "data:image/webp;base64,UklGRowAAABXRUJQVlA4IIAAAABwBACdASoQABUAPxFysFAsJqSisAgBgCIJZgC7MoAC+8Wo7P7JxozgTG10IADN0vJDDTySnGNsspMp3qNzaiuUc5fCw4CCiA+c7IZiTNx734r9ZCd7w+KEvSX0wMS5vNBWiZUx07dDM6mh+9DJW9cbDMauZb1fE0IZ56c5oMrMAA==",
@@ -142,5 +151,32 @@
     "alto": 1280,
     "lqip": "data:image/webp;base64,UklGRogAAABXRUJQVlA4IHwAAADQAwCdASoQABUAPxFysFAsJqSisAgBgCIJZQC7ACD66jfOy+5vWYAA/oVdrOJDxM5kytvUWmqkLz9ZZz7wVViE9oKFQPqQjuqH+uqm8YelSpJBvBPmiWaLYjsfM1WuntarYUkF5UYsh/MP3az3/Cx3oI6gIEZN9UVkAAAA",
     "kb": 86
+  },
+  "galeria-07-conchas": {
+    "nombre": "galeria-07-conchas",
+    "ruta": "/fotos/galeria-07-conchas.webp",
+    "alt": "Conchas de vainilla y de chocolate recién horneadas",
+    "ancho": 1200,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRpIAAABXRUJQVlA4IIYAAAAwBACdASoQABUAPxFysFAsJqSisAgBgCIJaACdMoADTpPSDNKeGdXKiaAA3kGpyw7rZeymTFn51M9NAyMce7E69MJGuUHn8FL4eAuFCV1cC4ni2/qZdbFLHE+foAW0IISVvWnbZmz+x8zBtgHYHKbPOH3qyf1Nu5ajkA/7i7fw921laDAAAA==",
+    "kb": 99
+  },
+  "galeria-08-palmeras": {
+    "nombre": "galeria-08-palmeras",
+    "ruta": "/fotos/galeria-08-palmeras.webp",
+    "alt": "Palmeras de hojaldre horneadas, doradas y caramelizadas",
+    "ancho": 960,
+    "alto": 1280,
+    "lqip": "data:image/webp;base64,UklGRnIAAABXRUJQVlA4IGYAAAAwBACdASoQABUAPxF0sFCsJqSisAgBgCIJbAC7MoADTrIHB6McLlkRu4AA/mHUTeJG4vn5a4hxEBH9AOwSSHUo7W8zOVAhoGmMs1QJbcZc9xM+BKRRVWeAYHmZlB6BFKUrbn7zAAA=",
+    "kb": 47
+  },
+  "galeria-09-galletas": {
+    "nombre": "galeria-09-galletas",
+    "ruta": "/fotos/galeria-09-galletas.webp",
+    "alt": "Galletas de pistache y de chispas de chocolate sobre tabla de madera",
+    "ancho": 1200,
+    "alto": 1600,
+    "lqip": "data:image/webp;base64,UklGRn4AAABXRUJQVlA4IHIAAAAwBACdASoQABUAPxFysFAsJqSisAgBgCIJYgCdMoADUr6+jtKX6kMze4AA/e9cKip9SAc0tEvU2e3d583eiF1U4wuvaoLHOj2QkJbXvUCCtm4XWkwpppNVWneuqKZuwqtR27vRdYKUv0Eg3gE7v7BzgAA=",
+    "kb": 145
   }
 }

@@ -11,8 +11,8 @@
  * Hoy esas palabras no existen en ningún lado indexable del negocio.
  *
  * PENDIENTE: las descripciones las redactó EcoNova a partir del nombre del
- * producto. La familia debe revisarlas antes de publicar — nadie fuera del
- * obrador sabe qué lleva cada masa.
+ * producto. La familia debe revisarlas antes de publicar — nadie fuera de la
+ * panadería sabe qué lleva cada masa.
  */
 
 export type Pan = {
@@ -23,6 +23,8 @@ export type Pan = {
   presentacion?: string;
   /** También disponible en molde de 1 kilo. */
   enMolde?: boolean;
+  /** Producto de temporada: se indica cuándo se hornea. */
+  temporada?: string;
   descripcion: string;
 };
 
@@ -41,7 +43,7 @@ export const CATALOGO: Familia[] = [
     slug: "salados",
     nombre: "Salados",
     intro:
-      "El corazón del obrador. Masa madre, fermentación lenta y horno de piso. Son los panes de mesa, los que aguantan la semana y mejoran tostados.",
+      "El corazón de la casa. Masa madre, fermentación lenta y horno de piso. Son los panes de mesa, los que aguantan la semana y mejoran tostados.",
     foto: "familia-salados",
     panes: [
       {
@@ -162,6 +164,133 @@ export const CATALOGO: Familia[] = [
     ],
   },
   {
+    slug: "pan-dulce",
+    nombre: "Pan dulce",
+    intro:
+      "Lo que se acaba primero cada mañana. Croissants y chocolatines de hojaldre, conchas, rolls de canela, galletas y bizcochos.",
+    foto: "familia-pan-dulce",
+    panes: [
+      {
+        slug: "croissant-clasico",
+        nombre: "Croissant clásico",
+        presentacion: "65 g",
+        descripcion: "Hojaldre de mantequilla, laminado a mano. Capas que truenan.",
+      },
+      {
+        slug: "chocolatin-clasico",
+        nombre: "Chocolatín clásico",
+        presentacion: "80 g",
+        descripcion: "El mismo hojaldre, con barra de chocolate dentro.",
+      },
+      {
+        slug: "cubo-nutella",
+        nombre: "Cubo de Nutella",
+        descripcion: "Hojaldre en cubo relleno de avellana y cacao.",
+      },
+      {
+        slug: "roll-de-canela-grande",
+        nombre: "Roll de canela grande",
+        presentacion: "90 g",
+        descripcion: "Espiral de canela y azúcar, tierno hasta el centro.",
+      },
+      {
+        slug: "roll-de-canela-pequeno",
+        nombre: "Roll de canela pequeño",
+        presentacion: "100 g",
+        descripcion: "El mismo roll, en porción individual.",
+      },
+      {
+        slug: "concha-de-vainilla",
+        nombre: "Concha de vainilla",
+        presentacion: "110 g",
+        descripcion: "La concha de siempre, con costra de vainilla.",
+      },
+      {
+        slug: "concha-de-chocolate",
+        nombre: "Concha de chocolate",
+        presentacion: "110 g",
+        descripcion: "Costra de cacao sobre masa dulce y suave.",
+      },
+      {
+        slug: "pan-de-muerto",
+        nombre: "Pan de muerto",
+        presentacion: "100 g",
+        temporada: "De septiembre a diciembre",
+        descripcion: "De temporada. Azahar y azúcar, como debe ser.",
+      },
+      {
+        slug: "galletas-new-york",
+        nombre: "Galletas New York",
+        presentacion: "100 g",
+        descripcion: "Galleta gruesa rellena de avellana y cacao.",
+      },
+      {
+        slug: "galleta-de-chispas-de-chocolate",
+        nombre: "Galleta de chispas de chocolate",
+        presentacion: "80 g",
+        descripcion: "Orillas crujientes, centro suave.",
+      },
+      {
+        slug: "galleta-de-arandano-y-chispas",
+        nombre: "Galleta de arándano y chispas",
+        presentacion: "80 g",
+        descripcion: "Arándano deshidratado y chispas de chocolate.",
+      },
+      {
+        slug: "galleta-de-pistache",
+        nombre: "Galleta de pistache",
+        presentacion: "80 g",
+        descripcion: "Pistache entero repartido en toda la galleta.",
+      },
+      {
+        slug: "barrita-energetica",
+        nombre: "Barrita energética",
+        presentacion: "100 g",
+        descripcion: "Semillas y fruta seca. Para llevar en la mochila.",
+      },
+      {
+        slug: "bizcocho-de-platano-y-aceite-de-oliva",
+        nombre: "Bizcocho de plátano y aceite de oliva",
+        presentacion: "250 g",
+        descripcion: "Húmedo y aromático. Aceite de oliva en lugar de mantequilla.",
+      },
+      {
+        slug: "bizcocho-de-limon-y-aceite-de-oliva",
+        nombre: "Bizcocho de limón y aceite de oliva",
+        presentacion: "270 g",
+        descripcion: "Ralladura de limón y miga cerrada.",
+      },
+      {
+        slug: "paquete-de-palmeras",
+        nombre: "Paquete de palmeras",
+        presentacion: "100 g",
+        descripcion: "Hojaldre caramelizado en formato pequeño, para compartir.",
+      },
+      {
+        slug: "palmera-grande",
+        nombre: "Palmera grande",
+        descripcion: "La palmera de toda la vida, tamaño completo.",
+      },
+      {
+        slug: "palmera-grande-de-chocolate",
+        nombre: "Palmera grande de chocolate",
+        descripcion: "Palmera bañada en chocolate.",
+      },
+      {
+        slug: "turron-de-chocolate",
+        nombre: "Turrón de chocolate",
+        presentacion: "55 g",
+        descripcion: "Turrón de chocolate en pieza individual.",
+      },
+      {
+        slug: "teresitas-de-nuez",
+        nombre: "Teresitas de nuez",
+        presentacion: "50 g",
+        descripcion: "Hojaldre con nuez y azúcar. Se acaban solas.",
+      },
+    ],
+  },
+  {
     slug: "bolleria",
     nombre: "Bollería",
     intro:
@@ -194,7 +323,7 @@ export const CATALOGO: Familia[] = [
       {
         slug: "masa-para-pizza",
         nombre: "Masa para pizza",
-        descripcion: "Masa lista para hornear en casa, fermentada en el obrador.",
+        descripcion: "Masa lista para hornear en casa, fermentada en la panadería.",
       },
     ],
   },
@@ -202,3 +331,6 @@ export const CATALOGO: Familia[] = [
 
 /** Total de productos, para el encabezado de la sección. */
 export const TOTAL_PANES = CATALOGO.reduce((n, f) => n + f.panes.length, 0);
+
+/** Número de familias, para el encabezado de la sección. */
+export const TOTAL_FAMILIAS = CATALOGO.length;
