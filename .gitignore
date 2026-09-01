@@ -50,3 +50,6 @@ tsconfig.tsbuildinfo
 # Basura de un hook con la ruta mal construida (escribe "C:Users..." como
 # nombre de archivo en vez de ruta). Se ignora para que no acabe en el repo.
 C:Users*
+
+# Capturas del smoke test visual: se regeneran, no se versionan.
+/_verificacion/

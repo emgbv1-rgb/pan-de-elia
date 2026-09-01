@@ -80,7 +80,7 @@ export const NEGOCIO = {
    * `NEXT_PUBLIC_SITIO` lo sobrescribe para la vista previa en GitHub Pages,
    * que vive en otra dirección.
    */
-  sitio: process.env.NEXT_PUBLIC_SITIO || "https://pandeelia.mx",
+  sitio: process.env.NEXT_PUBLIC_SITIO || "https://pandeelia.com",
 } as const;
 
 /**

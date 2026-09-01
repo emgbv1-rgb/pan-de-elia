@@ -32,12 +32,11 @@ jobs:
 
       - name: Construir sitio estático
         env:
-          # El sitio vive dentro de /pan-de-elia, no en la raíz del dominio.
-          NEXT_PUBLIC_BASE_PATH: /pan-de-elia
-          NEXT_PUBLIC_SITIO: https://emgbv1-rgb.github.io/pan-de-elia
-          # Vista previa: se publica con "no indexar" para no competir contra
-          # el dominio definitivo por el mismo contenido.
-          NEXT_PUBLIC_VISTA_PREVIA: "1"
+          # El sitio vive en la RAÍZ de pandeelia.com, así que no hay basePath.
+          # Pero GitHub Pages sólo sirve archivos: hay que pedir la exportación
+          # estática de forma explícita, porque ya no se deduce del basePath.
+          EXPORT_ESTATICO: "1"
+          NEXT_PUBLIC_SITIO: https://pandeelia.com
         run: npm run build
 
       - uses: actions/configure-pages@v5
