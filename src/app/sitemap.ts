@@ -15,7 +15,10 @@ export const dynamic = "force-static";
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: NEGOCIO.sitio,
+      // Con barra final: es la forma canonica que declara la portada, y el
+      // sitio se exporta con trailingSlash. Sin ella, Google recibe dos
+      // direcciones distintas para la misma pagina.
+      url: `${NEGOCIO.sitio}/`,
       lastModified: new Date("2026-08-20"),
       changeFrequency: "monthly",
       priority: 1,
