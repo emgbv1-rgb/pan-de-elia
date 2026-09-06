@@ -53,3 +53,7 @@ C:Users*
 
 # Capturas del smoke test visual: se regeneran, no se versionan.
 /_verificacion/
+
+# Documentos fiscales y financieros del negocio: NUNCA al repo público
+declaraciones de ingresos pan de elia/
+*.zip
