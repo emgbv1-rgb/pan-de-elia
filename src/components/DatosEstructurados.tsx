@@ -47,21 +47,24 @@ export function DatosEstructurados() {
       closes: h.cierra,
     })),
     sameAs: [NEGOCIO.redes.instagram, NEGOCIO.redes.facebook],
-    // El catálogo declarado: le dice a Google qué panes existen aquí.
-    hasOfferCatalog: {
-      "@type": "OfferCatalog",
+    // La carta declarada: le dice a Google qué panes existen aquí.
+    //
+    // Por qué es una carta (Menu) y no un catálogo de productos (Product):
+    // Google exige a cada Product un precio, una reseña o una calificación.
+    // Aquí no se publican precios (decisión 2026-08-21) y Search Console
+    // marcaba los 42 panes como "fragmentos de producto no válidos". Una
+    // panadería es un FoodEstablishment y su carta no lleva esa exigencia.
+    hasMenu: {
+      "@type": "Menu",
       name: "Panes de masa madre",
-      itemListElement: CATALOGO.map((familia) => ({
-        "@type": "OfferCatalog",
+      hasMenuSection: CATALOGO.map((familia) => ({
+        "@type": "MenuSection",
         name: familia.nombre,
-        itemListElement: familia.panes.map((pan) => ({
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Product",
-            name: pan.nombre,
-            description: pan.descripcion,
-            category: familia.nombre,
-          },
+        description: familia.intro,
+        hasMenuItem: familia.panes.map((pan) => ({
+          "@type": "MenuItem",
+          name: pan.nombre,
+          description: pan.descripcion,
         })),
       })),
     },
